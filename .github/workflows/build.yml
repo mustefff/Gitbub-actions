@@ -22,5 +22,6 @@ jobs:
         run: |
             mvn -B spring-boot:build-image -Dspring-boot.build-image.imageName=papizzz/github-actions-demo \
                 -Dspring-boot.build-image.publish=true \
-                -Ddocker.user=${{ secrets.DOCKER_USER }} -Ddocker.token=${{ secrets.DOCKER_HUB_TOKEN }} \
+                -Dspring-boot.build-image.docker.publishRegistry.username=${{ secrets.DOCKER_USER }} \
+                -Dspring-boot.build-image.docker.publishRegistry.password=${{ secrets.DOCKER_HUB_TOKEN }} \
                 -DskipTests
