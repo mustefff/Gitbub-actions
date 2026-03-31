@@ -1,4 +1,4 @@
-# Rapport de TP : Automatisation CI/CD avec GitHub Actions 🚀
+# Rapport de TP : Automatisation CI/CD avec GitHub Actions
 
 **Sujet :** Mise en œuvre de l'intégration et du déploiement continus (CI/CD) d'une application Spring Boot vers Docker Hub via GitHub Actions.
 
@@ -49,7 +49,7 @@ C'est le pipeline principal divisé en 3 jobs interdépendants :
 2. Initialiser le dépôt local et lier l'origin :
    ```bash
    git init
-   git remote add origin https://github.com/VOTRE_USER/github-actions-tp.git
+   git remote add origin https://github.com/mon_USER/github-actions-tp.git
    ```
 
 ### Étape 2 : Configuration des Secrets GitHub
@@ -77,7 +77,7 @@ Voici les preuves de fonctionnement à fournir dans ce rapport :
 
 ### [CAPTURE_ECRAN_2 : Exécution réussie du Workflow "build and deploy image"]
 *   **Emplacement :** Détail d'une exécution de workflow.
-*   **Justification :** Valide que les 3 jobs (Build, analysis, deploy) sont passés au vert (checkmarks ✅). Cela prouve que le passage d'artéfacts entre jobs a fonctionné.
+*   **Justification :** Valide que les 3 jobs (Build, analysis, deploy) sont passés au vert (checkmarks). Cela prouve que le passage d'artéfacts entre jobs a fonctionné.
 
 ### [CAPTURE_ECRAN_3 : Logs du Job Deploy]
 *   **Emplacement :** Log de l'étape "push image to docker hub".
