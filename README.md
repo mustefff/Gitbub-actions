@@ -49,12 +49,12 @@ C'est le pipeline principal divisé en 3 jobs interdépendants :
 2. Initialiser le dépôt local et lier l'origin :
    ```bash
    git init
-   git remote add origin https://github.com/mon_USER/github-actions-tp.git
+   git remote add origin https://github.com/mustefff/github-actions-tp.git
    ```
 
 ### Étape 2 : Configuration des Secrets GitHub
 Pour que GitHub puisse pousser l'image sur Docker Hub, vous devez configurer les "Secrets" dans votre dépôt GitHub (**Settings > Secrets and variables > Actions**) :
-- `DOCKER_HUB_USER` : Votre nom d'utilisateur Docker Hub.
+- `DOCKER_USER` : Votre nom d'utilisateur Docker Hub.
 - `DOCKER_HUB_TOKEN` : Votre Personal Access Token (PAT) Docker Hub.
 
 ### Étape 3 : Push du code
@@ -73,19 +73,23 @@ Voici les preuves de fonctionnement à fournir dans ce rapport :
 
 ### [CAPTURE_ECRAN_1 : Liste des Workflows]
 *   **Emplacement :** Onglet "Actions" sur GitHub.
+![alt text](image.png)
 *   **Justification :** Montre que GitHub a bien détecté les fichiers YAML dans le dossier `.github/workflows`.
 
 ### [CAPTURE_ECRAN_2 : Exécution réussie du Workflow "build and deploy image"]
 *   **Emplacement :** Détail d'une exécution de workflow.
+![alt text](image-1.png)
 *   **Justification :** Valide que les 3 jobs (Build, analysis, deploy) sont passés au vert (checkmarks). Cela prouve que le passage d'artéfacts entre jobs a fonctionné.
 
 ### [CAPTURE_ECRAN_3 : Logs du Job Deploy]
 *   **Emplacement :** Log de l'étape "push image to docker hub".
+![alt text](image-2.png)
 *   **Justification :** Preuve technique que l'image a bien été transmise aux serveurs de Docker Hub sans erreur d'authentification.
 
 ### [CAPTURE_ECRAN_4 : Présence de l'image sur Docker Hub]
 *   **Emplacement :** Votre compte Docker Hub (Browser).
-*   **Justification :** Résultat final. L'image `ngorseck/thymeleaf-springboot:0.0.2` (ou votre propre nom d'image) est listée avec le tag "latest" ou versionné, prouvant la réussite du cycle CD.
+![alt text](image-3.png)
+*   **Justification :** Résultat final. L'image `papizzz/thymeleaf-springboot:0.0.2` est listée avec le tag "latest" ou versionné, prouvant la réussite du cycle CD.
 
 ---
 
